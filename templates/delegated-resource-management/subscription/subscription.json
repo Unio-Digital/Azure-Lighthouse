@@ -35,6 +35,11 @@
                     "principalIdDisplayName": "Ryan Gyure"
                 },
                 {
+                    "principalId": "064c704e-4cc1-4788-ab1e-e6e638156de0",
+                    "roleDefinitionId": "fb1c8493-542b-48eb-b624-b4c8fea62acd",
+                    "principalIdDisplayName": "AdminAgents"
+                },
+                {
                     "principalId": "3d50fb64-114b-47aa-b2b8-6fb664ad6a40",
                     "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c",
                     "principalIdDisplayName": "HelpdeskAgents"
@@ -43,6 +48,11 @@
                     "principalId": "38dbe052-3348-41c7-9cf6-c34d4bf87d68",
                     "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c",
                     "principalIdDisplayName": "Ryan Gyure"
+                },
+                {
+                    "principalId": "064c704e-4cc1-4788-ab1e-e6e638156de0",
+                    "roleDefinitionId": "fa23ad8b-c56e-40d8-ac0c-ce449e1d2c64",
+                    "principalIdDisplayName": "AdminAgents"
                 }
             ]
         }              
