@@ -43,7 +43,8 @@
                     "principalId": "38dbe052-3348-41c7-9cf6-c34d4bf87d68",
                     "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c",
                     "principalIdDisplayName": "Ryan Gyure"
-                },
+                }
+            ]
         }              
     },
     "variables": {
