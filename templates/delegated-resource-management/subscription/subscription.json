@@ -6,25 +6,44 @@
             "type": "string",
             "metadata": {
                 "description": "Specify a unique name for your offer"
-            }
+            },
+            "defaultValue": "Unio Digital"
         },
         "mspOfferDescription": {
             "type": "string",
             "metadata": {
                 "description": "Name of the Managed Service Provider offering"
-            }
+            },
+            "defaultValue": "Unio Digital Managed IT"
         },
         "managedByTenantId": {
             "type": "string",
             "metadata": {
                 "description": "Specify the tenant id of the Managed Service Provider"
-            }
+            },
+            "defaultValue": "0631028b-02f0-425c-9072-6868e3463a07"
         },
         "authorizations": {
             "type": "array",
             "metadata": {
                 "description": "Specify an array of objects, containing tuples of Azure Active Directory principalId, a Azure roleDefinitionId, and an optional principalIdDisplayName. The roleDefinition specified is granted to the principalId in the provider's Active Directory and the principalIdDisplayName is visible to customers."
-            }
+            },
+            "defaultValue": [
+                {
+                    "principalId": "38dbe052-3348-41c7-9cf6-c34d4bf87d68",
+                    "roleDefinitionId": "fb1c8493-542b-48eb-b624-b4c8fea62acd",
+                    "principalIdDisplayName": "Ryan Gyure"
+                },
+                {
+                    "principalId": "3d50fb64-114b-47aa-b2b8-6fb664ad6a40",
+                    "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c",
+                    "principalIdDisplayName": "HelpdeskAgents"
+                },
+                {
+                    "principalId": "38dbe052-3348-41c7-9cf6-c34d4bf87d68",
+                    "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c",
+                    "principalIdDisplayName": "Ryan Gyure"
+                },
         }              
     },
     "variables": {
@@ -34,7 +53,7 @@
     "resources": [
         {
             "type": "Microsoft.ManagedServices/registrationDefinitions",
-            "apiVersion": "2019-09-01",
+            "apiVersion": "2020-02-01-preview",
             "name": "[variables('mspRegistrationName')]",
             "properties": {
                 "registrationDefinitionName": "[parameters('mspOfferName')]",
@@ -45,7 +64,7 @@
         },
         {
             "type": "Microsoft.ManagedServices/registrationAssignments",
-            "apiVersion": "2019-09-01",
+            "apiVersion": "2020-02-01-preview",
             "name": "[variables('mspAssignmentName')]",
             "dependsOn": [
                 "[resourceId('Microsoft.ManagedServices/registrationDefinitions/', variables('mspRegistrationName'))]"
